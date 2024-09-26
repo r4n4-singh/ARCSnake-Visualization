@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<robot name="snake_robot">
+
+  <!-- Define cyan material -->
+  <material name="cyan">
+    <color rgba="0.2 1 1 1"/>
+  </material>
+  
+  <!-- Define segment 1 -->
+  <link name="segment_1">
+    <visual>
+      <origin xyz="0 0 0.075"/>
+      <geometry>
+        <cylinder length="0.15" radius="0.02625"/>
+      </geometry>
+      <material name="cyan"/>
+    </visual>
+  </link>
+  
+  <!-- Define joint 1 pitch -->
+  <joint name="joint_1_pitch" type="revolute">
+    <parent link="segment_1"/>
+    <child link="joint_1_pitch_link"/>
+    <origin xyz="0 0 0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="150.0" lower="-1.5708" upper="1.5708" velocity="0.75"/>
+  </joint>
+  
+  <!-- Intermediate link (no visual geometry) -->
+  <link name="joint_1_pitch_link"/>
+  
+  <!-- Define joint 1 roll -->
+  <joint name="joint_1_roll" type="revolute">
+    <parent link="joint_1_pitch_link"/>
+    <child link="segment_2"/>
+    <origin xyz="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="150.0" lower="-1.5708" upper="1.5708" velocity="0.75"/>
+  </joint>
+  
+  <!-- Define segment 2 -->
+  <link name="segment_2">
+    <visual>
+      <origin xyz="0 0 0.075"/>
+      <geometry>
+        <cylinder length="0.15" radius="0.02625"/>
+      </geometry>
+      <material name="cyan"/>
+    </visual>
+  </link>
+  
+  <!-- Define joint 2 pitch -->
+  <joint name="joint_2_pitch" type="revolute">
+    <parent link="segment_2"/>
+    <child link="joint_2_pitch_link"/>
+    <origin xyz="0 0 0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="150.0" lower="-1.5708" upper="1.5708" velocity="0.75"/>
+  </joint>
+  
+  <!-- Intermediate link (no visual geometry) -->
+  <link name="joint_2_pitch_link"/>
+  
+  <!-- Define joint 2 roll -->
+  <joint name="joint_2_roll" type="revolute">
+    <parent link="joint_2_pitch_link"/>
+    <child link="segment_3"/>
+    <origin xyz="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="150.0" lower="-1.5708" upper="1.5708" velocity="0.75"/>
+  </joint>
+  
+  <!-- Define segment 3 -->
+  <link name="segment_3">
+    <visual>
+      <origin xyz="0 0 0.075"/>
+      <geometry>
+        <cylinder length="0.15" radius="0.02625"/>
+      </geometry>
+      <material name="cyan"/>
+    </visual>
+  </link>
+  
+  <!-- Define joint 3 pitch -->
+  <joint name="joint_3_pitch" type="revolute">
+    <parent link="segment_3"/>
+    <child link="joint_3_pitch_link"/>
+    <origin xyz="0 0 0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="150.0" lower="-1.5708" upper="1.5708" velocity="0.75"/>
+  </joint>
+  
+  <!-- Intermediate link (no visual geometry) -->
+  <link name="joint_3_pitch_link"/>
+  
+  <!-- Define joint 3 roll -->
+  <joint name="joint_3_roll" type="revolute">
+    <parent link="joint_3_pitch_link"/>
+    <child link="segment_4"/>
+    <origin xyz="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="150.0" lower="-1.5708" upper="1.5708" velocity="0.75"/>
+  </joint>
+  
+  <!-- Define segment 4 -->
+  <link name="segment_4">
+    <visual>
+      <origin xyz="0 0 0.075"/>
+      <geometry>
+        <cylinder length="0.15" radius="0.02625"/>
+      </geometry>
+      <material name="cyan"/>
+    </visual>
+  </link>
+  
+</robot>
