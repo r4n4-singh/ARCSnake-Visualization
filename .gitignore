@@ -4,3 +4,5 @@ log/
 src/*/build/
 src/*/install/
 src/*/log/
+.vscode
+src/.vscode

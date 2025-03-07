@@ -29,13 +29,15 @@ This command initializes the ROS environment, loads the URDF configuration, and 
 ## Directory Structure
 Here is an outline of the key directories and files within this package:
 
-- `config/`: Configuration files.
 - `launch/`: ROS2 launch files.
+- `rviz/`: RViz configuration files.
+- `urdf/`: URDF files describing the robot structure.  
+Optionally, you may use the following:
+- `config/`: Configuration files.
 - `meshes/`: Mesh files for the robot model.
 - `models/`: Model files.
-- `params/`: Parameter files.
-- `rviz/`: RViz configuration files.
-- `urdf/`: URDF files describing the robot structure.
+- `params/`: Parameter files.  
+However, they are not included since they're empty directories.
 
 ## Needed Libraries
 Ensure you have the following ROS2 packages installed:
